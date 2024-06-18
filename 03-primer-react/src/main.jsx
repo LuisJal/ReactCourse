@@ -14,7 +14,8 @@ import {CounterApp} from './CounterApp'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <ThirdApp titulo={'Luis'} subtitulo={'Palacios'}/>
+       <CounterApp value={20}/> 
+       {/*  <ThirdApp titulo={'Luis'} subtitulo={'Palacios'}/> */}
     </React.StrictMode>
 );
 

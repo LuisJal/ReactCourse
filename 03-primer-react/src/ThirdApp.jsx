@@ -20,6 +20,6 @@ ThirdApp.propTypes = {
 
 ThirdApp.defaultProps = {
   titulo: "Al toque",
-  subtitulo: "no hay subtitulo",
+  subtitulo: "Soy un subtitulo",
 };
  

@@ -15,7 +15,7 @@ export const CounterApp = ({ value }) => {
   return (
     <>
       <h1>CounterAppLuis</h1>
-      <h2>{counter}</h2>
+      <h2 data-testid="contador">{counter}</h2>
       <div className="botones">
         <button onClick={handleAdd}>+1</button>
         <button onClick={handleSubtract}>-1</button>

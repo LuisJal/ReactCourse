@@ -1,10 +1,12 @@
-import { getByTestId, render } from "@testing-library/react";
+import { getByTestId, render, screen } from "@testing-library/react";
 import { ThirdApp } from "../ThirdApp";
 
 describe("Pruebas en ThirdApp", () => {
-  /* 
-    
+  const title = "Hola buenas soy Luis";
 
+  const subt = "Soy un subtitulo";
+
+  /* 
     test('debe hacer match con el snapshot', () => {
        
         const title ='Hola buenas soy Luis'
@@ -14,11 +16,9 @@ describe("Pruebas en ThirdApp", () => {
 
         expect(container).toMatchSnapshot();
 
-    }); */
+    });  */
 
   test("debe mostrar el titulo en un h1", () => {
-    const title = "Hola buenas soy Luis";
-
     //EL dom se renderiza con el render
     const { container, getByText, getByTestId } = render(
       <ThirdApp titulo={title} />
@@ -36,17 +36,25 @@ describe("Pruebas en ThirdApp", () => {
   });
 
   test("debe mostrar el subtitulo enviado por props", () => {
-    const title = "Hola buenas soy Luis";
-    const subt = "Soy un subtitulo";
-
-    const {container,getByTestId } = render(
+    const { container, getByTestId } = render(
       <ThirdApp titulo={title} subtitulo={subt} />
     );
 
-    
     const subtituloReal = container.querySelector("h1");
-    console.log(subtituloReal.innerHtml)
-    expect(getByTestId('test-subt').innerHTML).toBe(subt);
+    console.log(subtituloReal.innerHtml);
+    expect(getByTestId("test-subt").innerHTML).toBe(subt);
     //expect(getByText(subt)).toBeTruthy();
+  });
+
+  test("Probando screen", () => {
+    render(<ThirdApp titulo={title} />);
+    expect(screen.getByText(title)).toBeTruthy();
+    //screen.debug();
+  });
+
+  test("Probando screen h1", () => {
+    render(<ThirdApp titulo={title} subtitulo={subt} />);
+    expect(screen.getByRole("heading", { level: 1 }).innerHTML).toContain(subt);
+    //screen.debug();
   });
 });
