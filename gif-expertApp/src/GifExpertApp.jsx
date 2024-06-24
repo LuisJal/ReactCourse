@@ -29,4 +29,4 @@ export const GifExpertApp = () => {
   );
 };
 
-const apiKey = "kLfb9BxEEvOIHyN9JAlJKke0u9n4hfpB";
+//const apiKey = "kLfb9BxEEvOIHyN9JAlJKke0u9n4hfpB";
