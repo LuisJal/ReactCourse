@@ -1,0 +1,19 @@
+
+
+body {
+  padding: 20px;
+}
+
+Button{
+  margin-right: 10px;
+}
+
+.sprite-img {
+  width: 150px; /* Ajusta el tamaño según sea necesario */
+  height: 150px; /* Ajusta el tamaño según sea necesario */
+  background-color: #e4c1c1; /* Fondo clarito */
+  border-radius: 50%; /* Esquinas redondeadas */
+  margin: 10px; /* Espaciado entre imágenes */
+  padding: 10px; /* Espaciado interno */
+  object-fit: cover; /* Ajusta la imagen dentro del contenedor */
+}
