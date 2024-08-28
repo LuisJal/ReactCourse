@@ -1,7 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import React from "react";
 
-export const AuthLayout = ({children, title=''}) => {
+export const AuthLayout = ({ children, title = "" }) => {
   return (
     <Grid
       container
@@ -15,13 +15,18 @@ export const AuthLayout = ({children, title=''}) => {
         item
         className="box-shadow"
         xs={3}
-        sx={{ width:{sm:450},backgroundColor: "white", padding: 3, borderRadius: 2 }}
+        sx={{
+          width: { sm: 450 },
+          backgroundColor: "white",
+          padding: 3,
+          borderRadius: 2,
+        }}
       >
         <Typography variant="h5" sx={{ mb: 1 }}>
           {title}
         </Typography>
         {/* Children que va a ser cad auno d elos dos formularios, o el de login o el de register */}
-            {children}
+        {children}
       </Grid>
     </Grid>
   );
